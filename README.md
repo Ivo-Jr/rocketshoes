@@ -1,5 +1,2 @@
-## ReactJs:
+## Redux:
 
-Front-end model with:
-
-- Eslint + Prettier + EditorConfig

@@ -12,7 +12,7 @@ export default class Home extends Component {
   async componentDidMount() {
     const response = await api.get('products');
 
-    this.setState({ products: response.data})
+    this.setState({ products: response.data });
   }
 
   render() {
@@ -20,21 +20,15 @@ export default class Home extends Component {
 
     return (
       <ProductList>
-        { products.map(product => (
+        {products.map(product => (
           <li key={product.id}>
-            <img
-              src={product.image}
-              alt={product.title}
-            />
-    
+            <img src={product.image} alt={product.title} />
             <strong>{product.title}</strong>
             <span>{product.price}</span>
-    
             <button type="button">
               <div>
                 <MdAddShoppingCart size={16} color="#FFF" /> 3
               </div>
-    
               <span>ADICIONAR AO CARRINHO</span>
             </button>
           </li>

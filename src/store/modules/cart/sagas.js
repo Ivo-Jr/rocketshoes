@@ -9,11 +9,18 @@ Basicamente esse meddleaware é um passo a mais entre a ACTION e o Reducer. */
 
 /* O 'call' chama métodos assíncrono e que retorna promises no JS. */
 
-// O put dispara uma ACTION do ReduX
-import { call, put } from 'redux-saga/effects';
+// O put dispara uma ACTION do Redux;
+
+import { call, put, all, takeLatest } from 'redux-saga/effects';
 
 import api from '../../../services/api';
 
+import { addToCartSuccess } from './actions';
+
 function* addToCart({ id }) {
   const response = yield call(api.get, `/products/${id}`);
+
+  yield put(addToCartSuccess(response.data));
 }
+
+export default all([takeLatest('@cart/ADD_REQUEST', addToCart)]);

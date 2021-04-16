@@ -6,7 +6,11 @@ Basicamente esse meddleaware é um passo a mais entre a ACTION e o Reducer. */
 
 /* O 'yield' é o como se fosse o 'await' do generator. Ou seja, tudo o que está depois do 
 'yield' ele aguardará a execução da sua linha ou escopo para depois xontinuar o restante do codigo  */
-import { call } from 'redux-saga/effects';
+
+/* O 'call' chama métodos assíncrono e que retorna promises no JS. */
+
+// O put dispara uma ACTION do ReduX
+import { call, put } from 'redux-saga/effects';
 
 import api from '../../../services/api';
 

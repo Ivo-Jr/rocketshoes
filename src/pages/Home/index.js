@@ -27,9 +27,9 @@ class Home extends Component {
 
   handleAddProduct = id => {
     // eslint-disable-next-line react/prop-types
-    const { addToCart } = this.props;
+    const { addToCartRequest } = this.props;
 
-    addToCart(id);
+    addToCartRequest(id);
   };
 
   render() {

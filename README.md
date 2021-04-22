@@ -1,5 +1,3 @@
-## ROCKETSHOES:
-
 <h1 align="center">
     <img alt="logo" src="src/assets/images/rocket.png" width="300px" />
 </h1>
